@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header.main {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgg img {
+    width: 130px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.imgg img:hover {
+    transform: scale(1.05);
+}
+
+nav.main.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul.nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul.nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav ul.nav li a:hover {
+    background-color: #f0f0f0;
+    color: #0078ff;
+}
+
+nav ul.nav li.button a {
+    background-color: #F69223;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul.nav li.button a:hover {
+    background-color: #414141;
+}
+
+nav ul.nav li.button.two a {
+    background-color: transparent;
+    border: 2px solid #0078ff;
+    color: #0078ff;
+}
+
+nav ul.nav li.button.two a:hover {
+    background-color: #0078ff;
+    color: #fff;
+}
+
+/* ===== PURE CSS SLIDER ===== */
+.hero-slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+/* Hide radio buttons */
+.slider input {
+    display: none;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: all 0.6s ease;
+}
+
+/* Each slide */
+.slide {
+    width: 100%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Control which slide shows when radio is checked */
+#slide1:checked~.slides {
+    margin-left: 0%;
+}
+
+#slide2:checked~.slides {
+    margin-left: -100%;
+}
+
+#slide3:checked~.slides {
+    margin-left: -200%;
+}
+
+#slide4:checked~.slides {
+    margin-left: -300%;
+}
+
+/* Navigation bars (small dots/buttons) */
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.navigation .bar {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigation .bar:hover {
+    background: white;
+}
+
+/* Arrows */
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.arrows label {
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 8px 16px;
+    pointer-events: all;
+    transition: 0.3s;
+}
+
+.arrows label:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slider {
+        height: 300px;
+    }
+
+    .arrows label {
+        font-size: 28px;
+    }
+}
+
+.div1 {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 12px;
+    padding: 40vh;
+    background-image: url(/Photos/415996145_345860868254258_1008390274227416940_n.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.div2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 20vh;
+    background-color: rgb(116, 208, 211);
+}
+
+h1 {
+    color: gold;
+    background-color: #333;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.footer-about {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00bcd4;
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-contact h4 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.footer-contact .social {
+    margin-top: 10px;
+}
+
+.footer-contact .social a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-contact .social a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer-bottom span {
+    color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        justify-content: center;
+    }
+
+    .footer-contact .social a img {
+        margin: 5px;
+    }
+}
+
+/* ===== ASIDE & LATEST NEWS BUTTON ===== */
+aside {
+    max-width: 320px;
+    margin: 20px;
+}
+
+.aside-content {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.aside-content + .aside-content {
+    margin-top: 16px;
+}
+
+.aside-btn {
+    display: inline-block;
+    background-color: #F69223;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background 0.3s ease;
+}
+
+.aside-btn:hover {
+    background-color: #414141;
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin: 8px 0;
+}
+
+aside a {
+    text-decoration: none;
+    color: #0078ff;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    aside {
+        max-width: 100%;
+        margin: 16px 0;
+    }
+}
+
+/* ===== FLOATING CONTACT / SOCIAL ASIDE (LEFT-TOP) ===== */
+.floating-aside {
+    position: fixed;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 2200;
+}
+
+.floating-item {
+    position: relative;
+}
+
+.floating-toggle {
+    background-color: #F69223;
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.floating-toggle:hover,
+.floating-toggle:focus {
+    background-color: #414141;
+    transform: translateY(-1px);
+}
+
+.floating-toggle.social {
+    background-color: #0078ff;
+}
+
+.floating-panel {
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-6px);
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+    min-width: 180px;
+    white-space: nowrap;
+}
+
+.floating-panel a {
+    color: #0078ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.floating-panel a img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+/* Show panels when hovering the container or focusing the buttons */
+.floating-item:hover .floating-panel,
+.floating-toggle:focus + .floating-panel {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Stacking tweak so the panel attached to the button below appears next to it: */
+/* no adjacent sibling override needed */
+
+@media (max-width: 520px) {
+    .floating-aside {
+        left: 8px;
+        top: 50%;
+        gap: 8px;
+    }
+
+    .floating-panel {
+        min-width: 140px;
+        padding: 8px;
+        left: calc(100% + 6px);
+    }
+}
